@@ -2,7 +2,7 @@
 	"name": "outTable",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "lsSQL",
+			"referenceName": "lsmssql",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
