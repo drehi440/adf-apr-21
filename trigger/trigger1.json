@@ -1,0 +1,28 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipelineParameterzied",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"fileName": "cars.csv",
+					"tableName": "Cars"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2021-08-23T07:40:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
