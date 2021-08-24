@@ -19,7 +19,9 @@
 						"referenceName": "dsFolderIn",
 						"type": "DatasetReference"
 					},
-					"fieldList": [],
+					"fieldList": [
+						"childItems"
+					],
 					"storeSettings": {
 						"type": "FileServerReadSettings",
 						"enablePartitionDiscovery": false
@@ -30,14 +32,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"fileName": {
-				"type": "string"
-			},
-			"tableName": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
