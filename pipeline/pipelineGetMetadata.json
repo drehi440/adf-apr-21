@@ -198,7 +198,10 @@
 									"referenceName": "dsInFileSize",
 									"type": "DatasetReference",
 									"parameters": {
-										"fileName": "@item().name"
+										"fileName": {
+											"value": "@item().name",
+											"type": "Expression"
+										}
 									}
 								},
 								"fieldList": [],
