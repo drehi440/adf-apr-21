@@ -166,7 +166,7 @@
 											"sink": {
 												"type": "DelimitedTextSink",
 												"storeSettings": {
-													"type": "FileServerWriteSettings"
+													"type": "AzureBlobStorageWriteSettings"
 												},
 												"formatSettings": {
 													"type": "DelimitedTextWriteSettings",
@@ -192,7 +192,7 @@
 										],
 										"outputs": [
 											{
-												"referenceName": "outputirdrehi",
+												"referenceName": "dsOutFolderSA",
 												"type": "DatasetReference"
 											}
 										]
@@ -214,8 +214,11 @@
 							"userProperties": [],
 							"typeProperties": {
 								"dataset": {
-									"referenceName": "dsFolderIn",
-									"type": "DatasetReference"
+									"referenceName": "dsInFileSize",
+									"type": "DatasetReference",
+									"parameters": {
+										"fileName": "@item().name"
+									}
 								},
 								"fieldList": [],
 								"storeSettings": {
