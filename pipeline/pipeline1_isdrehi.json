@@ -50,7 +50,10 @@
 				"inputs": [
 					{
 						"referenceName": "inputCSV_irhost",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"fileName": "cars.csv"
+						}
 					}
 				],
 				"outputs": [
@@ -63,7 +66,8 @@
 		],
 		"parameters": {
 			"fileName": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "cars.csv"
 			},
 			"tableName": {
 				"type": "string"
