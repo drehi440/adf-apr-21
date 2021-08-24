@@ -4,14 +4,14 @@
 		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
-			"connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=sqlsvraug21.database.windows.net;Initial Catalog=dbatinapr21;User ID=atingupta2005",
+			"connectionString": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=dsdrehi440.database.windows.net;Initial Catalog=dbdrehi440;User ID=drehi440",
 			"password": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
 					"referenceName": "ls_kv",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "sqlserver-pwd"
+				"secretName": "kvdfdrehi440"
 			}
 		}
 	},
