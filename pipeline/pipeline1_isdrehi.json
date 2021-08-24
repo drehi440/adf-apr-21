@@ -27,7 +27,15 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink"
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "FileServerWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
 					},
 					"enableStaging": false,
 					"translator": {
@@ -47,14 +55,8 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "outTable",
-						"type": "DatasetReference",
-						"parameters": {
-							"tableName": {
-								"value": "@pipeline().parameters.tableName",
-								"type": "Expression"
-							}
-						}
+						"referenceName": "outputirdrehi",
+						"type": "DatasetReference"
 					}
 				]
 			}
