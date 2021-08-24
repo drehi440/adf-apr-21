@@ -204,7 +204,12 @@
 										}
 									}
 								},
-								"fieldList": [],
+								"fieldList": [
+									{
+										"value": "Size\n",
+										"type": "Expression"
+									}
+								],
 								"storeSettings": {
 									"type": "FileServerReadSettings",
 									"enablePartitionDiscovery": false
