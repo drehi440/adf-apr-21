@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dfdrehi440"
+		},
+		"lsInput_adls_accountKey": {
+			"value": ""
+		},
+		"lsout_sql_connectionString": {
+			"value": ""
+		},
+		"lsInput_adls_properties_typeProperties_url": {
+			"value": "https://adlsdrehi440.dfs.core.windows.net"
+		},
+		"triggerEventsdrehi440_properties_pipeline1_parameters_fileName": {
+			"value": "@triggerBody().fileName"
+		},
+		"triggerEventsdrehi440_properties_typeProperties_scope": {
+			"value": "/subscriptions/f804e24f-f95a-4a8d-bfaa-ccfc26c51308/resourceGroups/rgdatafactory/providers/Microsoft.Storage/storageAccounts/adlsdrehi440"
+		}
+	}
+}
