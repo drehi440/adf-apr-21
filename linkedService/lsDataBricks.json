@@ -5,9 +5,12 @@
 		"annotations": [],
 		"type": "AzureDatabricks",
 		"typeProperties": {
-			"domain": "https://adb-7063219989564017.17.azuredatabricks.net",
-			"existingClusterId": "0808-130124-fleck885",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkFERlBIQVNFM19kODYzNGRmZS1mM2YwLTQ3NGQtOTU5ZS1mZTNiYWMwYWQyZGQiDQp9"
+			"domain": "https://adb-5707922573018124.4.azuredatabricks.net/?o=5707922573018124#",
+			"newClusterNodeType": "Standard_DS3_v2",
+			"newClusterNumOfWorker": "1",
+			"newClusterVersion": "7.3.x-hls-scala2.12",
+			"newClusterInitScripts": [],
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRGRFJFSEk0NDBfZmJjMzc1YzAtZGQ0NS00MmY2LWI2OTItZTU0YTViZGI0YTk2Ig0KfQ=="
 		}
 	}
 }
