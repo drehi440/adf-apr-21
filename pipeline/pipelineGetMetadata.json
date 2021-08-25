@@ -98,7 +98,10 @@
 										"userProperties": [],
 										"typeProperties": {
 											"variableName": "skippedFiles",
-											"value": "@item().name"
+											"value": {
+												"value": "@item().name",
+												"type": "Expression"
+											}
 										}
 									}
 								],
@@ -137,7 +140,10 @@
 												"storeSettings": {
 													"type": "FileServerReadSettings",
 													"recursive": true,
-													"wildcardFileName": "@item().name",
+													"wildcardFileName": {
+														"value": "@item().name",
+														"type": "Expression"
+													},
 													"enablePartitionDiscovery": false
 												},
 												"formatSettings": {
@@ -205,13 +211,11 @@
 									}
 								},
 								"fieldList": [
-									{
-										"value": "Size\n",
-										"type": "Expression"
-									}
+									"size"
 								],
 								"storeSettings": {
 									"type": "FileServerReadSettings",
+									"recursive": true,
 									"enablePartitionDiscovery": false
 								},
 								"formatSettings": {
