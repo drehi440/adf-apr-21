@@ -45,7 +45,7 @@
 					},
 					"activities": [
 						{
-							"name": "pipeline1",
+							"name": "ExecuteIncrementalPipeline",
 							"type": "ExecutePipeline",
 							"dependsOn": [],
 							"userProperties": [],
@@ -54,7 +54,17 @@
 									"referenceName": "pipeline1",
 									"type": "PipelineReference"
 								},
-								"waitOnCompletion": true
+								"waitOnCompletion": true,
+								"parameters": {
+									"TableName": {
+										"value": "@{item().TableName}",
+										"type": "Expression"
+									},
+									"WaterMarkColumn": {
+										"value": "@{item().WaterMarkColumn}",
+										"type": "Expression"
+									}
+								}
 							}
 						}
 					]
