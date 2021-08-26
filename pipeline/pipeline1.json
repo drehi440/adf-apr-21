@@ -18,7 +18,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "Select TableName, WaterMarkValue From dbo.watermarktable WHERE TableName = 'Cars'",
+							"value": "@Select TableName, WaterMarkValue From dbo.watermarktable WHERE TableName = pipeline().parameters.TableName",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -46,7 +46,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT max(InsertDateTime) AS NewWaterMarkValue FROM dbo.Cars",
+							"value": "@SELECT max(pipeline().parameters.WaterMarkColumn) AS NewWaterMarkValue FROM pipeline().parameters.TableName",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -87,7 +87,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT * From dbo.Cars Where InsertDateTime > '@{activity('lkpOldWaterMarkValue').output.firstRow.WaterMarkValue}' AND \nInsertDateTime <= '@{activity('lkpNewWaterMarkValue').output.firstRow.NewWaterMarkValue}'\n",
+							"value": "SELECT * From pipeline().parameters.TableName Where pipeline().parameters.WaterMarkColumn > '@{activity('lkpOldWaterMarkValue').output.firstRow.WaterMarkValue}' AND \npipeline().parameters.WaterMarkColumn <= '@{activity('lkpNewWaterMarkValue').output.firstRow.NewWaterMarkValue}'\n",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
