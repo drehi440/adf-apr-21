@@ -1,0 +1,25 @@
+{
+	"name": "dsConfigurationTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lsTarget",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "TableName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WaterMarkColumn",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ConfigurationTable"
+		}
+	}
+}
